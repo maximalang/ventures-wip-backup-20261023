@@ -617,6 +617,8 @@ platforms:
         provider: custom
         base_url: https://cheapmodels.xyz/v1
         key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    extra:
+      rich_messages: true
 _left_core_scoped:
   - homeassistant
 _left_core_installed:
