@@ -1,5 +1,5 @@
 model:
-  default: qwen-3.8-max
+  default: gpt-6-luna
   aliases:
     astra: openai-codex/gpt-6-astra
     ar-opus:
@@ -12,7 +12,7 @@ model:
   fallback_providers:
     - provider: openai-codex
       model: gpt-6-luna
-  api_mode: chat_completions
+  provider: openai-codex
 providers:
   agentrouter:
     extra_headers:
@@ -55,7 +55,7 @@ providers:
       cheapmodels/deepseek-v4.1-flash: {}
     key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   openai-codex:
-    name: OpenAI Codex
+    name: GPT paid pool (OpenAI Codex)
     model: gpt-6-luna
     discover_models: true
     models:
@@ -110,7 +110,8 @@ providers:
       glm-5.3: {}
       gpt-5.5: {}
       gpt-5.4: {}
-      claude-haiku-4-5-20251001: {}
+      claude-haiku-4-5-20251001:
+        context_length: 200000
       gpt-5.4-mini: {}
       gpt-5.6-luna: {}
       grok-4.70: {}
@@ -821,3 +822,15 @@ _left_core_scoped:
   - homeassistant
 _left_core_installed:
   - homeassistant
+gateway:
+  profile_routes:
+    - name: tg-owner-dm
+      platform: telegram
+      chat_id: '1256122537'
+      profile: herald
+      bot_profile: company
+    - name: tg-fleet-group
+      platform: telegram
+      chat_id: '-1004426332349'
+      profile: herald
+      bot_profile: company
