@@ -118,6 +118,8 @@ providers:
       gpt-oss-120b: {}
       gemini-3.1-flash-lite-image: {}
     key_env: HERMES_CUSTOM_POSITION_API_KEY
+  gemini:
+    api_key: AQ.Ab8RN6JI-taDCV5WqZCDuf4GpfOAMUvdkDoVuUnxE1NQFjpw2A
 credential_pool_strategies:
   openai-codex: round_robin
   zai: fill_first
