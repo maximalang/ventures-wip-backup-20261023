@@ -202,11 +202,9 @@ auxiliary:
   compression:
     provider: custom
     model: qwen-3.8-max
-    main_agent_fallback: false
     reasoning_effort: low
     timeout: 300
-    base_url: https://cheapmodels.xyz/v1
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    main_agent_fallback: False
 display:
   compact: false
   personality: technical
