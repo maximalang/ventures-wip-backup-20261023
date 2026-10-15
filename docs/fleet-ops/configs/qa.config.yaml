@@ -96,7 +96,8 @@ prompt_caching:
   cache_ttl: 5m
 auxiliary:
   transient_retries: 2
-  free_only: false
+  free_only: true
+  openrouter_model: nvidia/nemotron-3.5-lightning:free
   stream_only_base_urls: []
   vision:
     main_agent_fallback: false
