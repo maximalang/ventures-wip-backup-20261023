@@ -597,6 +597,7 @@ plugins:
     - fleet-policy
     - hermes-hookdeck/hookdeck
     - hermes-session-reset-policy
+    - holographic
     - rtk-rewrite
     - security-guidance
     - telegram-business
@@ -635,6 +636,8 @@ onboarding:
 telemetry:
   shared_metrics:
     enabled: false
+    send: false
+    offer_version: 2
 updates:
   pre_update_backup: false
   backup_keep: 5
@@ -657,7 +660,7 @@ desktop:
     - C:/Users/max/Desktop/all/fix-migrate-selfheal
     - C:/Users/max/Desktop/all/notifier-lane-B
     - C:/Users/max/Desktop/all/mvp-peni-site
-_config_version: 49
+_config_version: 51
 session_reset:
   mode: both
   idle_minutes: 480
@@ -835,8 +838,3 @@ gateway:
       chat_id: '-1004426332349'
       profile: herald
       bot_profile: company
-update:
-  installs:
-    f736b48cbb64a11b:
-      path: C:\Users\max\AppData\Local\hermes\hermes-agent
-      channel: stable

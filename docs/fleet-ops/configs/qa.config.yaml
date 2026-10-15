@@ -206,7 +206,7 @@ auxiliary:
     model: qwen-3.8-max
     reasoning_effort: low
     timeout: 300
-    main_agent_fallback: False
+    main_agent_fallback: false
 display:
   compact: false
   busy_input_mode: interrupt
@@ -402,7 +402,7 @@ updates:
   non_interactive_local_changes: stash
 computer_use:
   backend: cua
-_config_version: 49
+_config_version: 51
 session_reset:
   mode: none
   idle_minutes: 1440
