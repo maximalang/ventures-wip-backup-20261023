@@ -378,14 +378,12 @@ memory:
   nudge_interval: 20
   provider: holographic
 delegation:
-  model: qwen-3.8-max
-  provider: custom
+  model: glm-5.3-flash
+  provider: zai
   max_iterations: 250
   child_timeout_seconds: 3600
   reasoning_effort: max
   max_spawn_depth: 1
-  base_url: https://cheapmodels.xyz/v1
-  key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
 moa:
   presets:
     default:

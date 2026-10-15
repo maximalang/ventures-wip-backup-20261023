@@ -618,6 +618,17 @@ platforms:
         provider: zai
     extra:
       rich_messages: true
+      command_menu:
+        max_commands: 7
+        priority_mode: replace
+        priority:
+        - new
+        - topic
+        - retry
+        - stop
+        - approve
+        - deny
+        - title
 _left_core_scoped:
 - homeassistant
 _left_core_installed:
