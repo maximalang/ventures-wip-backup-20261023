@@ -468,6 +468,7 @@ updates:
   pre_update_backup: quick
   backup_keep: 5
   non_interactive_local_changes: stash
+  parked_branch_strategy: update_in_place
 computer_use:
   backend: cua
 _config_version: 49
