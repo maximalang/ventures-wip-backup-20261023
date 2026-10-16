@@ -1,7 +1,7 @@
 model:
-  default: qwen-3.8-max
-  provider: custom
-  base_url: https://cheapmodels.xyz/v1
+  default: glm-5.3
+  provider: zai
+  base_url: https://api.z.ai/api/coding/paas/v4
   aliases:
     q38: custom/qwen-3.8-max
     glm52: custom/glm-5.2
@@ -17,7 +17,7 @@ model:
     - provider: groq
       model: qwen/qwen3.8-27b
       base_url: https://api.groq.com/openai/v1
-  key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+  api_mode: chat_completions
 providers:
   groq:
     name: groq
