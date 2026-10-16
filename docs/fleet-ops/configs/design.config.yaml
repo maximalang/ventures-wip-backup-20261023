@@ -488,11 +488,6 @@ known_builtin_toolsets:
     - x_search
     - yuanbao
 mcp_servers:
-  codegraph:
-    command: codegraph
-    args:
-      - serve
-      - --mcp
   magic:
     command: npx
     args:

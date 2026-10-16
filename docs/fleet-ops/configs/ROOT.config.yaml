@@ -469,6 +469,11 @@ updates:
   pre_update_backup: quick
   backup_keep: 5
   non_interactive_local_changes: stash
+update:
+  installs:
+    f736b48cbb64a11b:
+      path: C:/Users/max/AppData/Local/hermes/hermes-agent
+      channel: main
 computer_use:
   backend: cua
 _config_version: 51

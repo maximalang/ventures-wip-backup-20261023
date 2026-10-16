@@ -507,8 +507,9 @@ known_builtin_toolsets:
     - yuanbao
 mcp_servers:
   codegraph:
-    command: codegraph
+    command: C:/Users/max/AppData/Local/codegraph/current/node.exe
     args:
+      - C:/Users/max/AppData/Local/codegraph/current/lib/dist/bin/codegraph.js
       - serve
       - --mcp
   timeweb:

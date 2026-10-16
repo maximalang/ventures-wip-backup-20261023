@@ -220,71 +220,71 @@ auxiliary:
     model: qwen-3.8-max
     reasoning_effort: low
     timeout: 300
-    main_agent_fallback: False
+    main_agent_fallback: false
   skills_hub:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
     main_agent_fallback: true
   approval:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 60
   review:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   mcp:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   title_generation:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
     main_agent_fallback: true
   memory_query_rewrite:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 30
     main_agent_fallback: true
   tts_audio_tags:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
     main_agent_fallback: true
   triage_specifier:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   kanban_decomposer:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 180
   profile_describer:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
     main_agent_fallback: true
   goal_judge:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   curator:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   monitor:
     provider: ollama-cloud
@@ -296,7 +296,7 @@ auxiliary:
   background_review:
     provider: zai
     model: glm-5.3
-    reasoning_effort: 
+    reasoning_effort:
     timeout: 300
   moa_reference:
     provider: zai
@@ -725,8 +725,9 @@ known_builtin_toolsets:
     - yuanbao
 mcp_servers:
   codegraph:
-    command: codegraph
+    command: C:/Users/max/AppData/Local/codegraph/current/node.exe
     args:
+      - C:/Users/max/AppData/Local/codegraph/current/lib/dist/bin/codegraph.js
       - serve
       - --mcp
   donut:

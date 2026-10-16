@@ -489,18 +489,6 @@ known_builtin_toolsets:
     - x_search
     - yuanbao
 mcp_servers:
-  codegraph:
-    command: codegraph
-    args:
-      - serve
-      - --mcp
-  magic:
-    command: npx
-    args:
-      - -y
-      - '@21st-dev/magic@latest'
-    env:
-      API_KEY: ${env:TWENTYFIRST_API_KEY}
   donut:
     url: http://127.0.0.1:51080/mcp/WdacSCnDSM44oAWCP9ngtPF930R6JoxW_ikIEBMdjMQ
     connect_timeout: 5

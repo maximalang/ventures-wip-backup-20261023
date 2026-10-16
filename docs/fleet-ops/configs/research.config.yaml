@@ -492,11 +492,6 @@ mcp_servers:
   deepwiki:
     url: https://mcp.deepwiki.com/mcp
     enabled: true
-  codegraph:
-    command: codegraph
-    args:
-      - serve
-      - --mcp
   donut:
     url: http://127.0.0.1:51080/mcp/WdacSCnDSM44oAWCP9ngtPF930R6JoxW_ikIEBMdjMQ
     connect_timeout: 5
