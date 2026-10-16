@@ -2,11 +2,6 @@ model:
   default: gpt-6-luna
   aliases:
     astra: openai-codex/gpt-6-astra
-    ar-opus:
-      model: claude-opus-5
-      provider: custom
-      base_url: https://cheapmodels.xyz/v1
-      key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   max_tokens: 16384
   reasoning_echo: true
   fallback_providers:
@@ -28,32 +23,6 @@ providers:
       claude-opus-5: {}
       gpt-5.6-sol: {}
     key_env: HERMES_CUSTOM_AGENTROUTER_API_KEY
-  cheapmodels:
-    name: cheapmodels
-    base_url: https://cheapmodels.xyz/v1
-    model: cheapmodels/claude-opus-5.5
-    discover_models: true
-    models:
-      cheapmodels/claude-opus-5.5: {}
-      cheapmodels/claude-fable-5.1: {}
-      cheapmodels/claude-opus-5.0: {}
-      cheapmodels/claude-sonnet-5.5: {}
-      cheapmodels/claude-fable-5: {}
-      cheapmodels/claude-opus-4.8: {}
-      cheapmodels/claude-sonnet-5: {}
-      cheapmodels/gpt-6.1-sol: {}
-      cheapmodels/gpt-6-astra: {}
-      cheapmodels/gpt-5.6-sol: {}
-      cheapmodels/gpt-5.6-terra: {}
-      cheapmodels/gpt-5.6-luna: {}
-      cheapmodels/grok-4.7: {}
-      cheapmodels/grok-4.6: {}
-      cheapmodels/kimi-k3: {}
-      cheapmodels/qwen-3.8-max: {}
-      cheapmodels/glm-5.3-flash: {}
-      cheapmodels/gemini-3.8-flash: {}
-      cheapmodels/deepseek-v4.1-flash: {}
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   openai-codex:
     name: GPT paid pool (OpenAI Codex)
     model: gpt-6-luna
@@ -201,6 +170,40 @@ compression:
   threshold_tokens: 128000
 prompt_caching:
   cache_ttl: 5m
+autoroute:
+  # Bench-first lane catalog (evidence: bench-nous-20261015,
+  # profiles/company/cache/scratch/bench-nous-20261015/results.json; scores 0-5).
+  # Router: agent/autoroute.py; frontdoors: `hermes autoroute`, `hermes chat --provider autoroute`.
+  default_lane: zai-glm53
+  lanes:
+    - name: zai-glm53
+      provider: zai
+      model: glm-5.3
+      cost_tier: subscription
+      evidence: bench-nous-20261015 5.75/6, 0 flakes, fastest
+      classes: {code: 4.5, reasoning: 4.5, routine: 5.0, long_context: 4.0}
+    - name: nous-laguna-free
+      provider: nous
+      model: poolside/laguna-s-2.1:free
+      cost_tier: free
+      max_tokens_floor: 6000
+      evidence: bench-nous-20261015 (capable at budget>=6000; empties at <=1600 are proven budget exhaustion, not transient)
+      classes: {code: 4.0, routine: 3.5}
+    - name: nous-step5-free
+      provider: nous
+      model: stepfun/step-5-preview:free
+      cost_tier: free
+      max_tokens_floor: 6000
+      evidence: bench-nous-20261015 + StepFun leaderboard coverage (knowledge/finance/agent, 1M ctx)
+      classes: {reasoning: 4.25, long_context: 4.0}
+    - name: codex-sol
+      provider: openai-codex
+      model: gpt-6.1-sol
+      cost_tier: subscription
+      require_explicit: true
+      evidence: fleet doctrine Rev4 tier-2 quality ceiling; quota-guarded, pin explicitly only
+      classes: {code: 5.0, reasoning: 5.0}
+
 auxiliary:
   transient_retries: 2
   free_only: true
@@ -217,89 +220,72 @@ auxiliary:
     model: qwen-3.8-max
     reasoning_effort: low
     timeout: 300
-    main_agent_fallback: false
-    base_url: https://cheapmodels.xyz/v1
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    main_agent_fallback: False
   skills_hub:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: 'https://cheapmodels.xyz/v1'
-    reasoning_effort: ''
-    key_env: 'HERMES_CUSTOM_CHEAPMODELS_API_KEY'
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
     main_agent_fallback: true
   approval:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
     timeout: 60
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   review:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   mcp:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   title_generation:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: 'https://cheapmodels.xyz/v1'
-    reasoning_effort: ''
-    key_env: 'HERMES_CUSTOM_CHEAPMODELS_API_KEY'
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
     main_agent_fallback: true
   memory_query_rewrite:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: 'https://cheapmodels.xyz/v1'
-    reasoning_effort: ''
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
     timeout: 30
-    key_env: 'HERMES_CUSTOM_CHEAPMODELS_API_KEY'
     main_agent_fallback: true
   tts_audio_tags:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: 'https://cheapmodels.xyz/v1'
-    reasoning_effort: ''
-    key_env: 'HERMES_CUSTOM_CHEAPMODELS_API_KEY'
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
     main_agent_fallback: true
   triage_specifier:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   kanban_decomposer:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
     timeout: 180
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   profile_describer:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: 'https://cheapmodels.xyz/v1'
-    reasoning_effort: ''
-    key_env: 'HERMES_CUSTOM_CHEAPMODELS_API_KEY'
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
     main_agent_fallback: true
   goal_judge:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   curator:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    reasoning_effort: ''
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   monitor:
     provider: ollama-cloud
     model: gemma4:31b
@@ -308,25 +294,18 @@ auxiliary:
     key_env: OLLAMA_API_KEY
     main_agent_fallback: true
   background_review:
-    provider: custom
-    model: claude-opus-5.5
-    base_url: https://cheapmodels.xyz/v1
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
-    reasoning_effort: ''
+    provider: zai
+    model: glm-5.3
+    reasoning_effort: 
+    timeout: 300
   moa_reference:
-    provider: custom
-    model: 'gemini-3.8-flash'
-    base_url: 'https://cheapmodels.xyz/v1'
-    api_key: ''
+    provider: zai
+    model: glm-5.3
     timeout: 900
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
   moa_aggregator:
-    provider: custom
-    model: 'claude-opus-5.5'
-    base_url: 'https://cheapmodels.xyz/v1'
-    api_key: ''
+    provider: zai
+    model: glm-5.3
     timeout: 900
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
 display:
   compact: false
   personality: helpful
