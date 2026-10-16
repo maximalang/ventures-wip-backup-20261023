@@ -374,6 +374,7 @@ plugins:
   enabled:
     - disk-cleanup
     - fleet-policy
+    - holographic
     - rtk-rewrite
     - security-guidance
     - yandex_mail

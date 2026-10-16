@@ -388,6 +388,7 @@ plugins:
   enabled:
     - disk-cleanup
     - fleet-policy
+    - holographic
     - homeassistant
     - rtk-rewrite
     - security-guidance
