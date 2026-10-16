@@ -818,3 +818,8 @@ gateway:
       chat_id: '-1004426332349'
       profile: herald
       bot_profile: company
+update:
+  installs:
+    f736b48cbb64a11b:
+      path: C:\Users\max\AppData\Local\hermes\hermes-agent
+      channel: main

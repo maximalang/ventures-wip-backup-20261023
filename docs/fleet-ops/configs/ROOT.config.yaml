@@ -606,6 +606,7 @@ gateway:
       chat_id: '-1004426332349'
       profile: herald
       bot_profile: company
+  service_install_choice: install
 platforms:
   webhook:
     enabled: true
