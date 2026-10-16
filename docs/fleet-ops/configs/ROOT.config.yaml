@@ -464,7 +464,9 @@ onboarding:
     openclaw_residue_cleanup: true
 telemetry:
   shared_metrics:
-    enabled: false
+    enabled: true
+    send: true
+    offer_version: 2
 updates:
   pre_update_backup: quick
   backup_keep: 5
