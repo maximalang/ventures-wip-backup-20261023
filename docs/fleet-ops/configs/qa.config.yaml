@@ -490,10 +490,11 @@ mcp_servers:
       - C:/Users/max/AppData/Local/codegraph/current/lib/dist/bin/codegraph.js
       - serve
       - --mcp
+    enabled: false
   donut:
     url: http://127.0.0.1:51080/mcp/WdacSCnDSM44oAWCP9ngtPF930R6JoxW_ikIEBMdjMQ
     connect_timeout: 5
-    enabled: true
+    enabled: false
 reasoning_effort: xhigh
 _left_core_scoped:
   - homeassistant
