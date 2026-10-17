@@ -74,7 +74,7 @@ fallback_providers:
 fallback:
   min_switch_reset_seconds: 120
 credential_pool_strategies:
-  openai-codex: round_robin
+  openai-codex: fill_first
   zai: fill_first
 database:
   journal_mode: wal
