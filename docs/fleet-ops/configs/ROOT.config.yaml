@@ -150,97 +150,141 @@ auxiliary:
     reasoning_effort: max
     timeout: 120
   skills_hub:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
   review:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    extra_body: {}
   mcp:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
   title_generation:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    enabled: true
+    model_upgrade_enabled: true
+    prefer_fast_model: false
+    api_key: ''
+    timeout: 30
+    extra_body: {}
+    language: ''
   memory_query_rewrite:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 8
+    extra_body: {}
   triage_specifier:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 120
+    extra_body: {}
   profile_describer:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 60
+    extra_body: {}
   goal_judge:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 60
+    extra_body: {}
   curator:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 600
+    extra_body: {}
   background_review:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    enabled: true
+    api_key: ''
+    timeout: 120
+    extra_body: {}
   approval:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
   kanban_decomposer:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 180
+    extra_body: {}
   tts_audio_tags:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 30
+    extra_body: {}
   monitor:
-    provider: custom
-    model: qwen-3.8-max
-    base_url: https://cheapmodels.xyz/v1
+    provider: zai
+    model: glm-5.3
+    base_url: ''
     reasoning_effort: max
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    key_env: ''
+    api_key: ''
+    timeout: 60
+    extra_body: {}
   compression:
     provider: custom
     model: qwen-3.8-max
-    main_agent_fallback: false
     reasoning_effort: low
     timeout: 300
-    base_url: https://cheapmodels.xyz/v1
-    key_env: HERMES_CUSTOM_CHEAPMODELS_API_KEY
+    main_agent_fallback: False
 display:
   compact: false
   busy_input_mode: interrupt
