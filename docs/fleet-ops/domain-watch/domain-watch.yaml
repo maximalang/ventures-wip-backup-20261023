@@ -1,0 +1,54 @@
+# domain-watch — конфиг непрерывного мониторинга (роль: research)
+# Скрипт: scripts/domain_watch_monitor.py (канон) → копия в profiles/research/scripts/
+# Агент просыпается ТОЛЬКО при изменении хэша вывода (hash-suppression).
+# Ошибка источника замораживает last-good (DEGRADED однократно), не будит повторно.
+# Покрытие: ТОЛЬКО перечисленные watch-источники; discovery-поиск новых событий
+# вне списка этим контуром НЕ делается (см. README).
+
+domains:
+  - name: llm-providers
+    material: >
+      Изменение цен/лимитов на наблюдаемых страницах (pricing/llms.txt эталонов
+      вендоров и пилотных кандидатов); задокументированный случай подмены модели.
+    check_urls:
+      - url: https://nano-gpt.com/pricing
+        expect: '\$[0-9]'
+      - url: https://docs.z.ai/guides/overview/pricing
+        expect: 'GLM'
+      - url: https://platform.claude.com/docs/en/about-claude/pricing
+        expect: '\$[0-9]'
+      - url: https://deepinfra.com/zai-org/GLM-5.3
+        expect: 'GLM'
+      - url: https://chutes.ai/pricing
+        expect: '\$[0-9]'
+      - url: https://aihubmix.com/model/glm-5.3/llms.txt
+        expect: 'GLM'
+    queries_when_triggered:
+      - "GLM-5.3 relay подмена модель замена провайдер"
+      - "llm relay reseller model substitution report"
+
+  - name: dpo-hrtech
+    material: >
+      Правовые изменения по ДПО/образованию (273-ФЗ и смежные), значимые ходы
+      конкурентов DPO-лидгена. Фид фильтруется по релевантности.
+    feeds:
+      - url: https://vc.ru/rss
+        filter: 'ДПО|образован|обучен|вакан|hr|рекрут|карьер|резюме'
+    check_urls:
+      - url: https://www.consultant.ru/document/cons_doc_LAW_144025/
+        expect: 'образован'
+    queries_when_triggered:
+      - "ДПО лицензия законодательство изменения"
+      - "дополнительное профессиональное образование новости"
+
+  - name: animation-monetization
+    material: >
+      Изменения монетизационных политик YouTube (пороги YPP, revenue share,
+      условия ToS). TikTok этим контуром НЕ покрывается — источников нет.
+    check_urls:
+      - url: https://support.google.com/youtube/answer/72851
+        expect: '1,000 subscribers|8,000 qualified|4,000 qualified'
+      - url: https://developers.google.com/youtube/terms/api-services-terms-of-service
+        expect: 'YouTube API Services'
+    queries_when_triggered:
+      - "YouTube Partner Program policy change"
