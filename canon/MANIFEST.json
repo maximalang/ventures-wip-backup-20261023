@@ -2,7 +2,7 @@
  "items": [
   {
    "relpath": "skills/software-development/clean-code/SKILL.md",
-   "sha256": "9aea7abf82e1c3ccc857f32d76aae00e6d4c9a967350114f5ead67185270207e",
+   "sha256": "a36ea1a3e8e95eb786462b232cf5f51136d35934283a44ca22762bf5fe4577ac",
    "targets": [
     "default",
     "company",
@@ -22,7 +22,7 @@
   },
   {
    "relpath": "skills/design/design-quality/SKILL.md",
-   "sha256": "1b57cd494a31e6ecb677857bee59327c560384e7549cf603a70b32787bd78fc4",
+   "sha256": "6af377521c9668e0a4f5035737ddedea2d8945972c0cd950622492b6779a648f",
    "targets": [
     "default",
     "company",
@@ -118,7 +118,7 @@
   },
   {
    "relpath": "skills/research/knowledge-base/SKILL.md",
-   "sha256": "7ffeb8f104213454cfbc30f36d304dad231c3edb35ac313beeca50b5bb60c6d6",
+   "sha256": "b21e2986bf945015b1d881fe3a78b0f207bdafbf67957d5bda5ec998365f36a0",
    "targets": [
     "research"
    ],
@@ -126,7 +126,7 @@
   },
   {
    "relpath": "skills/research/quality-loop/SKILL.md",
-   "sha256": "171e8ea86b1652e55785b06c3e485090935ae9f2cfcab16d80647985e657e066",
+   "sha256": "a2f2fec8f266e0443dbac8edb97cc65e99e870cbaaaac12aa4fbcd4cca3ef3df",
    "targets": [
     "research"
    ],
@@ -134,7 +134,7 @@
   },
   {
    "relpath": "skills/research/deep-search/SKILL.md",
-   "sha256": "cb370e99ca30d0b5204e38863a61d8c6717c541d330d6ac2c0d8e78db04a00a2",
+   "sha256": "37325832b5441558e7cfd45c71bcbdb7d37d9ec0fe664df3ac4205fed9c93654",
    "targets": [
     "research"
    ],

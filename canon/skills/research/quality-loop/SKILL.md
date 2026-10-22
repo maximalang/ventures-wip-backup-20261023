@@ -1,6 +1,6 @@
 ---
 name: quality-loop
-description: Use when starting or finishing any research task: lessons, verify, review.
+description: "Use when starting or finishing any research task: lessons, verify, review."
 version: 1.0.0
 license: MIT
 metadata:

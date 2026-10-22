@@ -1,6 +1,6 @@
 ---
 name: knowledge-base
-description: Use when researching any topic: wiki-first read/update docs/knowledge pages.
+description: "Use when researching any topic: wiki-first read/update docs/knowledge pages."
 version: 1.0.0
 license: MIT
 metadata:

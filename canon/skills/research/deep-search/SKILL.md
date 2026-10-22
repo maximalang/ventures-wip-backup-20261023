@@ -1,7 +1,7 @@
 ---
 name: deep-search
-description: Use when a research task is hard: multi-route investigation to primary sources.
-version: 1.0.0
+description: "Use when a research task is hard: multi-route investigation to primary sources."
+version: 1.1.0
 license: MIT
 metadata:
   hermes:
@@ -27,7 +27,7 @@ metadata:
 ## Этап 1 — маршруты под задачу (бесплатные усиления)
 | Нужно | Маршрут |
 |---|---|
-| Общий веб | web_search (SearXNG); важные запросы ДУБЛИРОВАТЬ через exa (web_extract-бэкенд) — движки разные, выдача разная |
+| Общий веб | web_search (SearXNG). Расширяй охват: 2+ формулировки, EN+RU, site: и filetype: операторы, intitle:, кавычки-фразы |
 | Операторы | site:, filetype:pdf, intitle:, кавычки-фразы — для точных документов |
 | Официальное/законы | searxng site:gov.ru / consultant.ru → extract полной страницы |
 | Научное | скилл `research/arxiv`; site:arxiv.org |

@@ -161,3 +161,41 @@
 2026-10-22 21:06:30 repaired missing research:skills/research/deep-search/SKILL.md
 2026-10-22 21:06:30 deploy items=13 repaired=1
 2026-10-22 21:06:30 check drift=0
+2026-10-22 21:29:01 added-to-manifest skills/research/deep-search/scripts/tavily_search.py
+2026-10-22 21:29:01 manifest-updated
+2026-10-22 21:29:01 repaired changed default:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed company:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed design:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed finance:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed operations:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed product:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed qa:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed research:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed sales:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed tech:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed ux:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed video-director:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed video-editor:skills/software-development/clean-code/SKILL.md
+2026-10-22 21:29:01 repaired changed default:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed company:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed design:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed finance:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed operations:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed product:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed qa:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed research:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed sales:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed tech:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed ux:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed video-director:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed video-editor:skills/design/design-quality/SKILL.md
+2026-10-22 21:29:01 repaired changed research:skills/research/knowledge-base/SKILL.md
+2026-10-22 21:29:01 repaired changed research:skills/research/quality-loop/SKILL.md
+2026-10-22 21:29:01 repaired changed research:skills/research/deep-search/SKILL.md
+2026-10-22 21:29:01 deploy items=14 repaired=29
+2026-10-22 21:29:01 check drift=0
+2026-10-22 21:33:55 removed-from-manifest skills/research/deep-search/scripts/tavily_search.py
+2026-10-22 21:33:55 manifest-updated
+2026-10-22 21:33:55 repaired changed research:skills/research/deep-search/SKILL.md
+2026-10-22 21:33:55 deploy items=13 repaired=1
+2026-10-22 21:33:55 check drift=0
