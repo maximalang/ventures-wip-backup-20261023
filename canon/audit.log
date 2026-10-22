@@ -139,3 +139,22 @@
 2026-10-22 19:48:43 repaired missing research:skills/research/knowledge-base/SKILL.md
 2026-10-22 19:48:43 deploy items=11 repaired=1
 2026-10-22 19:48:43 check drift=0
+2026-10-22 20:10:14 repaired missing default:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing qa:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing tech:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing research:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing design:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing operations:skills/fleet-workflow-efficiency/SKILL.md
+2026-10-22 20:10:14 repaired missing default:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing company:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing qa:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing tech:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing research:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing design:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 repaired missing operations:skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md
+2026-10-22 20:10:14 deploy items=11 repaired=13
+2026-10-22 20:10:14 check drift=0
+2026-10-22 20:17:47 repaired missing research:skills/research/quality-loop/SKILL.md
+2026-10-22 20:17:47 deploy items=12 repaired=1
+2026-10-22 20:17:47 check drift=0
+2026-10-22 20:58:50 check drift=0
