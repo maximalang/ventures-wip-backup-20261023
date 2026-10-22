@@ -1,0 +1,45 @@
+# domain-watch — конфиг непрерывного мониторинга (роль: research)
+# Монитор-скрипт: profiles/research/scripts/domain_watch_monitor.py
+# Агент просыпается ТОЛЬКО при изменении вывода скрипта (hash-suppression).
+# Владелец/research: добавляй домены сюда — код менять не нужно.
+
+domains:
+  - name: llm-providers
+    material: >
+      Изменение цен/лимитов у эталонов (Anthropic, Z.ai) или пилотных
+      кандидатов (NanoGPT, AIHubMix); новый задокументированный случай подмены
+      модели; изменение refund-политик; новые LLMS.txt/атрибуция у релеев.
+    check_urls:  # проверено как живые 22.10 (provider-market-research)
+      - https://nano-gpt.com/pricing
+      - https://docs.z.ai/guides/overview/pricing
+      - https://platform.claude.com/docs/en/about-claude/pricing
+      - https://deepinfra.com/zai-org/GLM-5.3
+      - https://chutes.ai/pricing
+      - https://aihubmix.com/model/glm-5.3/llms.txt
+    queries_when_triggered:  # добор агентом при срабатывании
+      - "GLM-5.3 relay подмена модель замена провайдер"
+      - "llm relay reseller model substitution report"
+
+  - name: dpo-hrtech
+    material: >
+      Изменения законодательства РФ по ДПО/образованию (Лицензия, реестры),
+      заметные ходы конкурентов DPO-лидгена (новые продукты, цены, баны),
+      платформенные изменения VK/Telegram для лидгена.
+    feeds:
+      - https://vc.ru/rss
+    check_urls:
+      - https://www.consultant.ru/document/cons_doc_LAW_144025/  # 273-ФЗ об образовании (ДПО)
+    queries_when_triggered:
+      - "ДПО лицензия законодательство изменения"
+      - "дополнительное профессиональное образование реестр новости"
+
+  - name: animation-monetization
+    material: >
+      Изменения монетизационных политик YouTube/TikTok (пороги входа, revenue
+      share, требования к каналам), новые форматы монетизации анимации.
+    check_urls:
+      - https://support.google.com/youtube/answer/72851  # требования монетизации YT
+      - https://developers.google.com/youtube/terms/api-services-terms-of-service
+    queries_when_triggered:
+      - "YouTube monetization policy change"
+      - "TikTok creator monetization requirements update"
