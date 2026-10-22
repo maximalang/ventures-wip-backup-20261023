@@ -1,114 +1,128 @@
 {
- "items": [
-  {
-   "relpath": "skills/software-development/clean-code/SKILL.md",
-   "sha256": "9aea7abf82e1c3ccc857f32d76aae00e6d4c9a967350114f5ead67185270207e",
-   "targets": [
-    "default",
-    "company",
-    "design",
-    "finance",
-    "operations",
-    "product",
-    "qa",
-    "research",
-    "sales",
-    "tech",
-    "ux",
-    "video-director",
-    "video-editor"
-   ],
-   "added": "2026-10-19"
-  },
-  {
-   "relpath": "skills/design/design-quality/SKILL.md",
-   "sha256": "1b57cd494a31e6ecb677857bee59327c560384e7549cf603a70b32787bd78fc4",
-   "targets": [
-    "default",
-    "company",
-    "design",
-    "finance",
-    "operations",
-    "product",
-    "qa",
-    "research",
-    "sales",
-    "tech",
-    "ux",
-    "video-director",
-    "video-editor"
-   ],
-   "added": "2026-10-19"
-  },
-  {
-   "relpath": "skills/company-os/SKILL.md",
-   "sha256": "be031bf677ef2653de7be0da17c97a8462b5001c01419a39d65258e6cd6e84e3",
-   "targets": [
-    "company"
-   ],
-   "added": "2026-10-21"
-  },
-  {
-   "relpath": "skills/fleet-workflow-efficiency/SKILL.md",
-   "sha256": "eaba3abf0259c547341b7c0a92b168a73b0ed262360c5a5eb503eb31f0e9c02d",
-   "targets": [
-    "company"
-   ],
-   "added": "2026-10-21"
-  },
-  {
-   "relpath": "skills/company-os/references/outcome-loop.md",
-   "sha256": "71fdf7f71f1619bfe9b03452b2a51ffd780f442cc4003aab95817dc50f602ac4",
-   "targets": [
-    "company"
-   ],
-   "added": "2026-10-21"
-  },
-  {
-   "relpath": "skills/research/rss-feeds/SKILL.md",
-   "sha256": "1cde44fd3f17c4e34c055ef8c259d1ad62d29b6d0ad69f51b4d87f37ac0fbcce",
-   "targets": [
-    "research"
-   ],
-   "added": "2026-10-22"
-  },
-  {
-   "relpath": "skills/research/rss-feeds/scripts/feed.py",
-   "sha256": "1c3567a5db400b5191988f1b77693d13caf0de72a56eabf0da4b52fe5a7e000e",
-   "targets": [
-    "research"
-   ],
-   "added": "2026-10-22"
-  },
-  {
-   "relpath": "skills/social-media/reddit-reading/SKILL.md",
-   "sha256": "1230ca7efc84873a0fb2dba17f80c4d848d0b39020935f56e25b832b12b34fbf",
-   "targets": [
-    "research"
-   ],
-   "added": "2026-10-22"
-  },
-  {
-   "relpath": "skills/social-media/reddit-reading/scripts/reddit.py",
-   "sha256": "cc61f3d6eb7482114af788352ce2e677b16d93d093f17667f076d152f8414135",
-   "targets": [
-    "research"
-   ],
-   "added": "2026-10-22"
-  },
-  {
-   "relpath": "skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md",
-   "sha256": "9ebd28d584b512a856d61ebea97c7eb0bd7a2522fc935791ffb139d86d84f41b",
-   "targets": [],
-   "added": "2026-10-22"
-  },
-  {
-   "relpath": "skills/research/knowledge-base/SKILL.md",
-   "sha256": "7ffeb8f104213454cfbc30f36d304dad231c3edb35ac313beeca50b5bb60c6d6",
-   "targets": [
-    "research"
-   ],
-   "added": "2026-10-22"
-  }
- ]
+  "items": [
+    {
+      "relpath": "skills/software-development/clean-code/SKILL.md",
+      "sha256": "9aea7abf82e1c3ccc857f32d76aae00e6d4c9a967350114f5ead67185270207e",
+      "targets": [
+        "default",
+        "company",
+        "design",
+        "finance",
+        "operations",
+        "product",
+        "qa",
+        "research",
+        "sales",
+        "tech",
+        "ux",
+        "video-director",
+        "video-editor"
+      ],
+      "added": "2026-10-19"
+    },
+    {
+      "relpath": "skills/design/design-quality/SKILL.md",
+      "sha256": "1b57cd494a31e6ecb677857bee59327c560384e7549cf603a70b32787bd78fc4",
+      "targets": [
+        "default",
+        "company",
+        "design",
+        "finance",
+        "operations",
+        "product",
+        "qa",
+        "research",
+        "sales",
+        "tech",
+        "ux",
+        "video-director",
+        "video-editor"
+      ],
+      "added": "2026-10-19"
+    },
+    {
+      "relpath": "skills/company-os/SKILL.md",
+      "sha256": "be031bf677ef2653de7be0da17c97a8462b5001c01419a39d65258e6cd6e84e3",
+      "targets": [
+        "company"
+      ],
+      "added": "2026-10-21"
+    },
+    {
+      "relpath": "skills/fleet-workflow-efficiency/SKILL.md",
+      "sha256": "eaba3abf0259c547341b7c0a92b168a73b0ed262360c5a5eb503eb31f0e9c02d",
+      "targets": [
+        "default",
+        "company",
+        "qa",
+        "tech",
+        "research",
+        "design",
+        "operations"
+      ],
+      "added": "2026-10-21"
+    },
+    {
+      "relpath": "skills/company-os/references/outcome-loop.md",
+      "sha256": "71fdf7f71f1619bfe9b03452b2a51ffd780f442cc4003aab95817dc50f602ac4",
+      "targets": [
+        "company"
+      ],
+      "added": "2026-10-21"
+    },
+    {
+      "relpath": "skills/research/rss-feeds/SKILL.md",
+      "sha256": "1cde44fd3f17c4e34c055ef8c259d1ad62d29b6d0ad69f51b4d87f37ac0fbcce",
+      "targets": [
+        "research"
+      ],
+      "added": "2026-10-22"
+    },
+    {
+      "relpath": "skills/research/rss-feeds/scripts/feed.py",
+      "sha256": "1c3567a5db400b5191988f1b77693d13caf0de72a56eabf0da4b52fe5a7e000e",
+      "targets": [
+        "research"
+      ],
+      "added": "2026-10-22"
+    },
+    {
+      "relpath": "skills/social-media/reddit-reading/SKILL.md",
+      "sha256": "1230ca7efc84873a0fb2dba17f80c4d848d0b39020935f56e25b832b12b34fbf",
+      "targets": [
+        "research"
+      ],
+      "added": "2026-10-22"
+    },
+    {
+      "relpath": "skills/social-media/reddit-reading/scripts/reddit.py",
+      "sha256": "cc61f3d6eb7482114af788352ce2e677b16d93d093f17667f076d152f8414135",
+      "targets": [
+        "research"
+      ],
+      "added": "2026-10-22"
+    },
+    {
+      "relpath": "skills/fleet-workflow-efficiency/references/windows-worker-bootstrap.md",
+      "sha256": "9ebd28d584b512a856d61ebea97c7eb0bd7a2522fc935791ffb139d86d84f41b",
+      "targets": [
+        "default",
+        "company",
+        "qa",
+        "tech",
+        "research",
+        "design",
+        "operations"
+      ],
+      "added": "2026-10-22"
+    },
+    {
+      "relpath": "skills/research/knowledge-base/SKILL.md",
+      "sha256": "7ffeb8f104213454cfbc30f36d304dad231c3edb35ac313beeca50b5bb60c6d6",
+      "targets": [
+        "research"
+      ],
+      "added": "2026-10-22"
+    }
+  ]
 }
