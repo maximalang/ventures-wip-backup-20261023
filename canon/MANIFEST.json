@@ -131,6 +131,14 @@
     "research"
    ],
    "added": "2026-10-22"
+  },
+  {
+   "relpath": "skills/research/deep-search/SKILL.md",
+   "sha256": "cb370e99ca30d0b5204e38863a61d8c6717c541d330d6ac2c0d8e78db04a00a2",
+   "targets": [
+    "research"
+   ],
+   "added": "2026-10-22"
   }
  ]
 }
