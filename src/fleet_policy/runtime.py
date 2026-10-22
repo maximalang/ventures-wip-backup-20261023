@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import load_config
-from .models import PolicyDecision
+from .models import PolicyDecision, remediation_for
 from .policy import Classification, classify, infer_task_type
 from .redaction import args_hash, redact, stable_id
 from .storage import PolicyStore, utc_now
@@ -267,6 +267,7 @@ class FleetPolicyRuntime:
             timestamp=utc_now(),
             budget_snapshot=snapshot,
             approval_card=approval_card,
+            remediation=remediation_for(rule_id),
         )
         notify = decision == "approval_required" or rule_id in {"secret_read_or_write", "worker_self_approval"}
         if decision == "allow" and result.effect == "read":

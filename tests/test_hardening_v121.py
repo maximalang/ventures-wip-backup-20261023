@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import fnmatch
 import hashlib
 import importlib.util
 import json
@@ -16,6 +17,43 @@ import pytest
 from fleet_policy.policy import classify
 
 ROOT = Path(__file__).parents[1]
+
+_SOURCE_COPY_IGNORE_NAMES = (
+    ".git",
+    ".venv",
+    ".state",
+    ".pytest_cache",
+    "__pycache__",
+    "*.egg-info",
+    "*.pyc",
+    "*.pyo",
+)
+# Top-level only: large local trees that are never part of the release bundle.
+_SOURCE_COPY_IGNORE_TOP_LEVEL = (
+    ".worktrees",
+    ".codegraph",
+    "docs",
+    "node_modules",
+    ".venv*",
+    "qa-drill-*",
+    "dist",
+    "reports",
+    "config-backups",
+)
+
+
+def _copy_source_tree(source: Path) -> None:
+    base_ignore = shutil.ignore_patterns(*_SOURCE_COPY_IGNORE_NAMES)
+
+    def ignore(directory: str, names: list[str]) -> set[str]:
+        ignored = base_ignore(directory, names)
+        if Path(directory).resolve() == ROOT.resolve():
+            for name in names:
+                if any(fnmatch.fnmatchcase(name, pattern) for pattern in _SOURCE_COPY_IGNORE_TOP_LEVEL):
+                    ignored.add(name)
+        return ignored
+
+    shutil.copytree(ROOT, source, ignore=ignore)
 
 
 def test_worker_execute_code_requires_exact_one_time_approval(runtime, task_context, monkeypatch):
@@ -101,13 +139,7 @@ def test_release_bundle_inventory_is_stable_after_generated_egg_info(tmp_path):
     from fleet_policy.release_bundle import build_release_bundle, release_inventory, verify_release_bundle
 
     source = tmp_path / "exact-source"
-    shutil.copytree(
-        ROOT,
-        source,
-        ignore=shutil.ignore_patterns(
-            ".git", ".venv", ".state", ".pytest_cache", "__pycache__", "*.egg-info", "*.pyc", "*.pyo"
-        ),
-    )
+    _copy_source_tree(source)
     clean_bundle = tmp_path / "clean-bundle"
     generated_bundle = tmp_path / "generated-bundle"
     build_release_bundle(source, clean_bundle)
@@ -380,13 +412,7 @@ def test_release_bundle_handles_generated_metadata_case_insensitively(tmp_path):
     from fleet_policy.release_bundle import build_release_bundle, verify_release_bundle
 
     source = tmp_path / "source"
-    shutil.copytree(
-        ROOT,
-        source,
-        ignore=shutil.ignore_patterns(
-            ".git", ".venv", ".state", ".pytest_cache", "__pycache__", "*.egg-info", "*.pyc", "*.pyo"
-        ),
-    )
+    _copy_source_tree(source)
     mixed_case_metadata = source / "src" / "X.EGG-INFO"
     mixed_case_metadata.mkdir()
     (mixed_case_metadata / "PKG-INFO").write_text("Metadata-Version: 2.1\n", encoding="utf-8")

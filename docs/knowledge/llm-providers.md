@@ -9,7 +9,7 @@
 - **PackyAPI** (🟡): самая низкая нормализованная цена (Opus $0.46/$2.29); валюта списания не подтверждена без checkout — [retrieved 2026-10-22, verified, packyapi.com/pricing]
 - **UnoRouter** (🟡): −78% на Opus ($0.89/$4.47 PAYG); единственный зафиксированный случай подмены (зонд-конкурент, n=1) — [retrieved 2026-10-22, verified, unorouter.com/en/pricing]
 - **LMU AI** (🟡): C-PRO self-disclosed reverse-пул, ¥599/30д ≈ −83.5%; privacy policy в Draft — [retrieved 2026-10-22, verified, api.lmuai.ai]
-- **Baseline не-«серые»**: DeepInfra GLM-5.3 $0.56/$2.50 (promo); Chutes TEE: GLM-5.2 $1.25/$3.95, Kimi-K3 $1.85/$9.50 (GLM-5.3 нет) — [retrieved 2026-10-22, verified]
+- **Baseline не-«серые»**: DeepInfra GLM-5.3: промо $0.563 in / $2.50 out, cached input $0.125; обычный (непромо) тариф $0.90/$4.00 (cached $0.20); Flex (0.8×) $0.45/$2.00 — перепроверка тиком 19:57 22.10: изменения цен против утреннего snapshot НЕТ (sha-триггер noise; cached-цены дозаписаны) — [retrieved 2026-10-22, verified, deepinfra.com/zai-org/GLM-5.3]; Chutes TEE: GLM-5.2 $1.25/$3.95, Kimi-K3 $1.85/$9.50 (GLM-5.3 нет) — [retrieved 2026-10-22, verified]
 - FX-пересчёт ₽→$ по ЦБ **81.9739** на 22.10.2026 (пред. 82.8879) — [retrieved 2026-10-22, verified, cbr-xml-daily.ru]
 - plakcel — подтверждённая подмена (234 имени = 1 Qwen3-бэкенд); политика владельца 21.10: аккуратно, не удалять — [fact_store #25]
 
@@ -23,4 +23,5 @@
 - POLOAPI: жалоба linux.do не перепроверена (pending).
 
 ## История обновлений
+- 2026-10-22 (тик 19:57, domain-watch) — sha-триггеры deepinfra/nano-gpt: цены GLM-5.3 неизменны (noise); дозаписаны cached/непромо/Flex-цены DeepInfra.
 - 2026-10-22 — первичное наполнение; исправлена неточность v1 (NanoGPT: Opus=официалу, GLM ниже официала). Артефакт: provider-market-research-20261022.
